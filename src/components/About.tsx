@@ -1,10 +1,9 @@
-
 import { Card } from "@/components/ui/card";
 
 const About = () => {
   const skills = [
-    "HTML", "CSS", "JavaScript", "React.js", "Node.js", 
-    "Express.js", "MongoDB", "Firebase", "AWS EC2"
+    "HTML", "CSS","Bootstrap", "JavaScript", "React.js", "Node.js", 
+    "Express.js", "MongoDB", "AWS EC2"
   ];
 
   return (
@@ -28,7 +27,7 @@ const About = () => {
               Over the past 2 years, I've gained valuable experience working with modern technologies and frameworks, from building responsive frontends with React to developing robust backends with Node.js and managing data with MongoDB and Firebase.
             </p>
             <p className="text-lg text-foreground/80 leading-relaxed">
-              When I'm not coding, I enjoy creating content to share my learnings with the developer community and mentoring aspiring developers on their coding journey.
+              Outside of coding, I love being creative on Instagram and also enjoy mentoring aspiring developers on their journey into tech.
             </p>
           </div>
 
@@ -54,7 +53,7 @@ const About = () => {
                 </div>
                 <div>
                   <p className="font-medium text-primary">Software Intern</p>
-                  <p className="text-sm text-muted-foreground">Infixzon Pvt. Ltd. • Node.js + Firebase + AWS EC2</p>
+                  <p className="text-sm text-muted-foreground">Infixzon Pvt. Ltd. • Node.js + Express.js</p>
                 </div>
                 <div>
                   <p className="font-medium text-primary">Freelancer</p>
@@ -62,24 +61,27 @@ const About = () => {
                 </div>
               </div>
             </Card>
-
-            <Card className="p-6 bg-background border-muted">
-              <h3 className="text-xl font-poppins font-semibold text-foreground mb-4">
-                Skills
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {skills.map((skill, index) => (
-                  <span 
-                    key={index}
-                    className="px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-sm font-medium"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </Card>
           </div>
         </div>
+
+        {/* Skills card moved outside the grid to take full width */}
+       <div className="mt-12 animate-slide-in">
+  <Card className="p-6 bg-background border-muted w-full">
+    <h3 className="text-xl font-poppins font-semibold text-foreground mb-6">
+      Skills
+    </h3>
+    <div className="grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] gap-5">
+      {skills.map((skill, index) => (
+        <span
+          key={index}
+          className="px-4 py-2 bg-secondary text-secondary-foreground text-center rounded-full text-sm font-medium transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-primary hover:text-primary-foreground"
+        >
+          {skill}
+        </span>
+      ))}
+    </div>
+  </Card>
+</div>
       </div>
     </section>
   );

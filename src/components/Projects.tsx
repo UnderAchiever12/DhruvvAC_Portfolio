@@ -1,4 +1,3 @@
-
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink } from "lucide-react";
@@ -9,22 +8,25 @@ const Projects = () => {
       title: "EPC Management System",
       description: "A comprehensive role-based system for construction workflows, enabling efficient project management and team collaboration.",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&h=300&fit=crop",
-      tech: ["Node.js", "Firebase", "AWS EC2"],
-      features: ["Role-based Access", "Workflow Management", "Real-time Updates"]
+      tech: ["Node.js","Express.js"],
+      features: ["Role-based Access", "Workflow Management", "Real-time Updates"],
+      githubLink: "https://github.com/yourusername/epc-management",
     },
     {
       title: "Speed Detection System",
-      description: "Advanced vehicle speed analysis system using computer vision for traffic monitoring and safety enhancement.",
+      description: "Developed the Frontend and Backend system with the help of React.js, Express.js of the Speed Detection System",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop",
-      tech: ["Python", "OpenCV", "Computer Vision"],
-      features: ["Real-time Detection", "Traffic Analysis", "Safety Monitoring"]
+      tech: ["React.js", "Node.js", "Express.js"],
+      features: ["Real-time Detection", "Authentication", "Safety Monitoring"],
+      githubLink: "https://github.com/UnderAchiever12/speed_detection_system",
     },
     {
       title: "CRM Software",
-      description: "Complete customer relationship management solution with lead tracking, task management, and analytics dashboard.",
+      description: "Complete customer relationship management solution with ticket creation maintaining a status dashboard, along with lead management.",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop",
-      tech: ["React", "Node.js", "MongoDB"],
-      features: ["Lead Management", "Task Tracking", "Analytics Dashboard"]
+      tech: ["React.js", "Node.js", "MongoDB"],
+      features: ["Lead Management", "Ticket System", "Status Dashboard"],
+      githubLink: "https://github.com/UnderAchiever12/crm_frontend",
     }
   ];
 
@@ -86,14 +88,32 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex gap-3">
-                  <Button size="sm" variant="outline" className="flex-1">
-                    <Github className="w-4 h-4 mr-2" />
-                    Code
-                  </Button>
-                  <Button size="sm" className="flex-1">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Live Demo
-                  </Button>
+                  {project.githubLink && (
+                    <a 
+                      href={project.githubLink} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="flex-1"
+                    >
+                      <Button size="sm" variant="outline" className="w-full">
+                        <Github className="w-4 h-4 mr-2" />
+                        Code
+                      </Button>
+                    </a>
+                  )}
+                  {/* {project.liveDemo && (
+                    <a 
+                      href={project.liveDemo} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="flex-1"
+                    >
+                      <Button size="sm" className="w-full">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Live Demo
+                      </Button>
+                    </a>
+                  )} */}
                 </div>
               </div>
             </Card>

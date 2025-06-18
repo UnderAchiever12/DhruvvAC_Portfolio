@@ -45,7 +45,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-80 h-80 md:w-96 md:h-96 rounded-full bg-gradient-to-br from-secondary to-muted overflow-hidden border-8 border-card shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=400&fit=crop&crop=face"
+                  src="https://i.postimg.cc/m2mtqfbG/d54f0541-7667-48bb-808e-655e31801d2a.jpg"
                   alt="Dhruvv Chhokshi"
                   className="w-full h-full object-cover"
                 />
